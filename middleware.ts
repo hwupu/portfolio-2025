@@ -9,8 +9,10 @@ export function middleware(request: NextRequest) {
       script-src 'nonce-${nonce}' 'strict-dynamic' 'self' https: 'unsafe-inline';
       style-src 'nonce-${nonce}' 'self';
       img-src 'self' blob: data: https://*.clarity.ms/c.gif https://c.bing.com/c.gif;
-      font-src 'self';
+      font-src 'self' https://fonts.gstatic.com;
       form-action 'self';
+      frame-ancestors 'none';
+      manifest-src 'self';
       upgrade-insecure-requests;
   `
     // Replace newline characters and spaces

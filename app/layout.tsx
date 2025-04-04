@@ -25,7 +25,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const nonce = (await headers()).get("x-nonce") ?? '';
-  console.log('layout', nonce);
   return (
     <html lang="en">
       <body
