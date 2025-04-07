@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-security",
     "@nuxt/scripts",
+    "@nuxthub/core",
   ],
   css: ["~/assets/css/main.css"],
   app: {
