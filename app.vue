@@ -3,8 +3,9 @@ import * as locales from "@nuxt/ui/locale";
 
 const { locale } = useI18n();
 
-const lang = computed(() => locales[locale.value].code);
-const dir = computed(() => locales[locale.value].dir);
+const code = computed(() => (locale.value === "zh" ? "zh_tw" : locale.value));
+const lang = computed(() => locales[code.value].code);
+const dir = computed(() => locales[code.value].dir);
 
 useHead({
   htmlAttrs: {
@@ -12,18 +13,15 @@ useHead({
     dir,
   },
 });
-useSeoMeta({
-  ogImage: "/og-image/cubic-center.png",
-  ogTitle: "Cubic Center",
-  ogDescription: "A portfolio website for Cubic Center",
-});
 </script>
 
 <template>
-  <UApp :locale="locales[locale]">
+  <UApp :locale="locales[code]">
     <NuxtRouteAnnouncer />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <div class="bg-(--ui-bg)" data-vaul-drawer-wrapper>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </div>
   </UApp>
 </template>

@@ -14,13 +14,19 @@ export default defineNuxtConfig({
     "nuxt-security",
     "@nuxt/scripts",
     "@nuxthub/core",
+    "@vueuse/nuxt",
   ],
   css: ["~/assets/css/main.css"],
   app: {
     head: {
       title: "Nuxt", // default fallback title
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          sizes: "32x32",
+          href: "/favicon.ico",
+        },
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         {
           rel: "apple-touch-icon",
@@ -28,6 +34,10 @@ export default defineNuxtConfig({
           href: "/apple-touch-icon.png",
         },
       ],
+    },
+    rootAttrs: {
+      "data-vaul-drawer-wrapper": "",
+      class: "bg-(--ui-bg)",
     },
   },
   scripts: {
@@ -58,14 +68,23 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
+    baseUrl: "https://phwu.dev",
+    defaultLocale: "en",
     locales: [
       {
         code: "en",
         name: "English",
+        language: "en-US",
+        file: "en.json",
       },
       {
-        code: "zh_tw",
+        code: "zh",
         name: "中文",
+        language: "zh-Hant",
+        file: "zh.json",
       },
     ],
   },
