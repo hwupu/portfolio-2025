@@ -80,6 +80,9 @@ export default defineNuxtConfig({
     },
     baseUrl: "https://phwu.dev",
     strategy: "prefix_and_default",
+    detectBrowserLanguage: {
+      cookieSecure: true,
+    },
     defaultLocale: "en",
     locales: [
       {
