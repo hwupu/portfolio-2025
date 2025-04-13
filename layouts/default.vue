@@ -41,6 +41,7 @@ useSeoMeta({
       >
         <slot />
       </main>
+      <BaseFooter />
     </Body>
   </Html>
 </template>

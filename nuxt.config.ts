@@ -8,11 +8,12 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   modules: [
-    "@nuxt/ui",
     "@nuxt/eslint",
-    "@nuxtjs/i18n",
     "nuxt-security",
     "@nuxt/scripts",
+    "@nuxtjs/i18n",
+    "@nuxt/content",
+    "@nuxt/ui",
     "@nuxthub/core",
     "@vueuse/nuxt",
   ],
@@ -51,7 +52,12 @@ export default defineNuxtConfig({
     headers: {
       contentSecurityPolicy: {
         "default-src": ["'none'"],
-        "connect-src": ["'self'", "https://*.clarity.ms/collect"],
+        "connect-src": [
+          "'self'",
+          "https://*.clarity.ms/collect",
+          "ws://*.phwu.dev",
+          "ws://localhost:4000",
+        ],
         "img-src": [
           "'self'",
           "https://*.clarity.ms/c.gif",
@@ -62,6 +68,7 @@ export default defineNuxtConfig({
           "'strict-dynamic'",
           "'self'",
           "https://*.phwu.dev",
+          "'wasm-unsafe-eval'",
           "'unsafe-inline'",
         ],
       },
@@ -72,6 +79,7 @@ export default defineNuxtConfig({
       optimizeTranslationDirective: false,
     },
     baseUrl: "https://phwu.dev",
+    strategy: "prefix_and_default",
     defaultLocale: "en",
     locales: [
       {
