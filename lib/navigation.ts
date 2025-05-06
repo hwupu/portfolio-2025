@@ -27,6 +27,6 @@ export const secondary: LocaleTuple<Link[]> = {
   zh: [
     { title: "隱私權政策", href: "/privacy" },
     { title: "AI 使用聲明", href: "/disclosure" },
-    { title: "合作關係", href: "/affiliation" },
+    { title: "Affiliations", href: "/affiliation" },
   ],
 };
