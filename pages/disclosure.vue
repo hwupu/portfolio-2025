@@ -39,6 +39,11 @@ useHead({
           Code completion and generation are used. Models may include: Claude
           3.7 Sonnet
         </li>
+        <li>
+          Several AI tools are used for spelling and grammar correction. It may
+          includes, but not limited to, OpenAI and other built-in features from
+          Apple, Microsoft, and Google.
+        </li>
       </ul>
     </section>
   </BaseContainer>

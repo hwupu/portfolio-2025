@@ -20,8 +20,7 @@ const { top } = useElementBounding(el);
       cn(
         'pointer-events-none sticky inset-x-0 top-0 z-[29] overflow-y-visible print:hidden',
         {
-          'mt-[calc(-1*var(--ui-header-height))] h-[var(--ui-header-height)]':
-            props.variant === 'static',
+          'h-[var(--ui-header-height)]': props.variant === 'static',
           'h-0': props.variant !== 'static',
           'xs:block hidden': !$slots.default,
         },

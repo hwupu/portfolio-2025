@@ -7,7 +7,7 @@ const { locale } = useI18n();
 <template>
   <footer
     id="wcag-footer"
-    class="flex min-h-60 flex-col justify-between gap-8 bg-[oklch(0.25_0.05_245)] py-4 text-white sm:py-8 print:hidden"
+    class="flex min-h-[var(--ui-footer-height)] flex-col justify-between gap-8 bg-[oklch(0.25_0.05_245)] py-4 text-white sm:py-8 print:hidden"
   >
     <BaseContainer class="w-full">
       <ul class="grid gap-4 sm:grid-cols-3 lg:grid-cols-3">

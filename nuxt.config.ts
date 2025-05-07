@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/eslint",
-    // "@nuxt/content",
+    "@nuxt/content",
     "@nuxtjs/i18n",
     "@nuxt/scripts",
     "@nuxthub/core",

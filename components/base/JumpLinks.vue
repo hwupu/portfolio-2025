@@ -15,7 +15,7 @@ const list = [
     v-for="link in list"
     :key="link.id"
     :href="link.id"
-    class="bg-foreground text-background fixed top-0 left-4 z-40 block w-fit -translate-y-full p-2 outline-offset-0 focus-visible:translate-y-4 motion-safe:transition-transform print:hidden"
+    class="bg-foreground text-background fixed top-4 left-0 z-40 block w-fit translate-x-[-150%] p-2 outline-offset-0 focus-visible:translate-x-4 motion-safe:transition-transform print:hidden"
     >{{ link.label }}</a
   >
 </template>

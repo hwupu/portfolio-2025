@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @import "tw-animate-css";
 
 @theme {
@@ -126,6 +127,7 @@
   }
   body {
     --ui-header-height: 4rem;
+    --ui-footer-height: 16rem;
     @apply bg-background text-foreground text-lg print:text-xs;
   }
   a,

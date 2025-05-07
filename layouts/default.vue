@@ -33,7 +33,10 @@ useSeoMeta({
     <Body>
       <BaseJumpLinks />
       <BaseHeader :variant="(route.meta?.variant as 'fancy') ?? undefined" />
-      <main id="wcag-main">
+      <main
+        id="wcag-main"
+        class="min-h-[calc(100svh-var(--ui-header-height)-var(--ui-footer-height)+4rem)]"
+      >
         <slot />
       </main>
       <BaseCallToActions />

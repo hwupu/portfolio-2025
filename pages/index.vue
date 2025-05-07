@@ -13,10 +13,12 @@ useHead({
   <BaseHeaderShade />
   <LandingCoverSection />
   <div class="h-screen bg-[#677F88]">
-    <BaseHeaderShade class="bg-blue-950/50 shadow-blue-700/10" />
+    <BaseHeaderShade class="bg-blue-950/50 text-white shadow-blue-700/10">
+      <a id="section3" href="#section3">Section 2</a>
+    </BaseHeaderShade>
   </div>
   <div class="h-screen bg-[#B4A79A]">
-    <BaseHeaderShade class="bg-amber-950/50 shadow-amber-700/10">
+    <BaseHeaderShade class="bg-amber-950/50 text-white shadow-amber-700/10">
       <a id="section3" href="#section3">Section 3</a>
     </BaseHeaderShade>
   </div>
