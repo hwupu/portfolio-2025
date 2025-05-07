@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useTemplateRef } from "#imports";
 import { useElementBounding, useWindowScroll } from "@vueuse/core";
 import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";

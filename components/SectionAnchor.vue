@@ -2,7 +2,7 @@
 const props = defineProps<{
   id?: string;
   href: string;
-  title: string;
+  title?: string;
   active?: boolean;
 }>();
 </script>
@@ -16,6 +16,6 @@ const props = defineProps<{
     ><span
       class="text-2xl opacity-25 group-hover:opacity-75 group-focus-visible:opacity-75 motion-safe:transition-opacity"
       >#</span
-    >{{ props.title }}</a
+    ><slot>{{ props.title }}</slot></a
   >
 </template>
