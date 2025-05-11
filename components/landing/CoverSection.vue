@@ -116,7 +116,7 @@ const layer2 = [
 
 <template>
   <section
-    class="relative isolate z-10 mt-[calc(-1*var(--ui-header-height))] h-screen bg-neutral-300 text-white lg:z-20 dark:bg-neutral-800"
+    class="xs:mt-[calc(-1*var(--ui-header-height))] relative isolate z-10 h-screen bg-neutral-300 text-white lg:z-20 dark:bg-neutral-800"
   >
     <picture class="absolute inset-x-0 bottom-0 z-[-1] w-full">
       <source

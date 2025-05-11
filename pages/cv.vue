@@ -133,6 +133,25 @@ const socialLinks = [
           />
         </ul>
       </section>
+
+      <section
+        class="space-y-4 print:order-3 print:break-inside-avoid print:space-y-2"
+      >
+        <h2 class="text-3xl print:text-lg">
+          {{ locale === "en" ? "Certifications" : "證照" }}
+        </h2>
+        <ul class="ml-6 list-outside list-disc space-y-4">
+          <li class="space-y-4">
+            <h3>
+              {{
+                locale === "en"
+                  ? "Emergency Medical Technician (EMT-1)"
+                  : "初級救護技術員（EMT-1）"
+              }}
+            </h3>
+          </li>
+        </ul>
+      </section>
     </div>
   </BaseContainer>
 </template>
