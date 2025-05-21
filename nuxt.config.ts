@@ -69,6 +69,7 @@ export default defineNuxtConfig({
   image: {
     format: ["avif", "webp"],
     dir: "assets/images",
+    provider: "cloudflare",
     cloudflare: {
       baseURL: "https://phwu.dev",
     },
@@ -88,11 +89,11 @@ export default defineNuxtConfig({
           "'self'",
           "https://*.clarity.ms/collect",
           "ws://*.phwu.dev",
-          "ws://localhost:4000",
         ],
         "img-src": [
           "'self'",
           "data:",
+          "https://phwu.dev",
           "https://*.clarity.ms/c.gif",
           "https://c.bing.com/c.gif",
         ],
