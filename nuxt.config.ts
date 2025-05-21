@@ -52,6 +52,16 @@ export default defineNuxtConfig({
       },
     ],
   },
+  content: {
+    preview: {
+      api: "https://api.nuxt.studio",
+      gitInfo: {
+        name: "portfolio-2025",
+        owner: "hwupu",
+        url: "https://github.com/hwupu/portfolio-2025",
+      },
+    },
+  },
   image: {
     format: ["avif", "webp"],
     dir: "assets/images",
