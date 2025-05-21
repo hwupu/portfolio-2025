@@ -33,7 +33,10 @@ const socialLinks = [
 </script>
 
 <template>
-  <BaseHeaderShade variant="static" class="bg-white/75" />
+  <BaseHeaderShade
+    variant="static"
+    class="bg-white/75 dark:bg-neutral-800/75"
+  />
   <BaseContainer
     padding-y="default"
     class="flex flex-col gap-x-4 gap-y-20 sm:gap-x-8 lg:flex-row xl:gap-x-16 print:flex-row print:gap-x-16 print:pb-4"

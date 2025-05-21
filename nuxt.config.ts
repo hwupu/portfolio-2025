@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/i18n",
     "@nuxt/scripts",
+    "@nuxtjs/color-mode",
     "@nuxthub/core",
     "shadcn-nuxt",
   ],
@@ -39,7 +40,7 @@ export default defineNuxtConfig({
     rootAttrs: {
       // @ts-expect-error https://www.shadcn-vue.com/docs/components/drawer.html#scale-background
       "vaul-drawer-wrapper": "",
-      class: "bg-white",
+      class: "bg-[var(--background)]",
     },
   },
   icon: {
@@ -51,6 +52,9 @@ export default defineNuxtConfig({
         dir: "./assets/icons",
       },
     ],
+  },
+  colorMode: {
+    classSuffix: "",
   },
   content: {
     preview: {

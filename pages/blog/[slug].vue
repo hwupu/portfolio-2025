@@ -10,7 +10,10 @@ useHead({
 </script>
 
 <template>
-  <BaseHeaderShade variant="static" class="bg-white/75" />
+  <BaseHeaderShade
+    variant="static"
+    class="bg-white/75 dark:bg-neutral-800/75"
+  />
   <BaseContainer padding-y="default">
     <template v-if="post">
       <ContentRenderer

@@ -23,7 +23,11 @@ const { data: articles } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <BaseHeaderShade v-slot="{ active }" variant="static" class="bg-white/75">
+  <BaseHeaderShade
+    v-slot="{ active }"
+    variant="static"
+    class="bg-white/75 dark:bg-neutral-800/75"
+  >
     <SectionAnchor href="#blog" :title="t('title')" :active />
   </BaseHeaderShade>
   <BaseContainer padding-y="default" class="space-y-20">

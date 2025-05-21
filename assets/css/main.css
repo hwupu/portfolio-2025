@@ -128,7 +128,7 @@
   body {
     --ui-header-height: 4rem;
     --ui-footer-height: 16rem;
-    @apply bg-background text-foreground text-lg print:text-xs;
+    @apply text-foreground bg-[var(--background)] text-lg print:text-xs;
   }
   a,
   button {
