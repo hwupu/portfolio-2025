@@ -7,12 +7,12 @@ export interface Link {
 
 export const primary: LocaleTuple<Link[]> = {
   en: [
-    { title: "Home", href: "/" },
+    { title: "Story", href: "/" },
     { title: "CV", href: "/cv" },
     { title: "Blog", href: "/blog" },
   ],
   zh: [
-    { title: "首頁", href: "/" },
+    { title: "故事", href: "/" },
     { title: "履歷", href: "/cv" },
     { title: "部落格", href: "/blog" },
   ],

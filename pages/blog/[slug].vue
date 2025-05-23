@@ -18,7 +18,7 @@ useHead({
     <template v-if="post">
       <ContentRenderer
         :value="post"
-        class="prose prose-lg prose-a:decoration-amber-600"
+        class="prose prose-lg prose-a:decoration-amber-600 dark:prose-invert"
       />
     </template>
     <template v-else>

@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { Primitive, type PrimitiveProps } from "reka-ui";
-import type { HtmlHTMLAttributes } from "vue";
-import { cn } from "@/lib/utils";
+import { cn, type ClassValue } from "@/lib/utils";
 
 const props = withDefaults(
   defineProps<
     PrimitiveProps & {
-      class?: HtmlHTMLAttributes["class"];
+      class?: ClassValue;
       paddingY?: "default";
     }
   >(),

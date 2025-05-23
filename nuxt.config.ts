@@ -11,7 +11,6 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-security",
     "@nuxt/icon",
-    "@nuxt/image",
     "@nuxt/eslint",
     "@nuxt/content",
     "@nuxtjs/i18n",
@@ -64,14 +63,6 @@ export default defineNuxtConfig({
         owner: "hwupu",
         url: "https://github.com/hwupu/portfolio-2025",
       },
-    },
-  },
-  image: {
-    format: ["avif", "webp"],
-    dir: "assets/images",
-    provider: "cloudflare",
-    cloudflare: {
-      baseURL: "https://phwu.dev",
     },
   },
   scripts: {

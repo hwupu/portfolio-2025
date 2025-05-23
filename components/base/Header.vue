@@ -10,7 +10,6 @@ const props = defineProps<{
   variant?: "fancy";
 }>();
 
-const show = ref(true);
 const { t, locale } = useI18n({ useScope: "local" });
 const switchLocalePath = useSwitchLocalePath();
 const { y } = useWindowScroll();

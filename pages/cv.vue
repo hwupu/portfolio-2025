@@ -104,7 +104,7 @@ const socialLinks = [
         <h2 class="text-3xl print:text-lg">
           {{ locale === "en" ? "Projects" : "專案" }}
         </h2>
-        <p>todo</p>
+        <p class="italic">{{ locale === "en" ? "Preparing" : "準備中" }}</p>
       </section>
 
       <section
@@ -138,7 +138,7 @@ const socialLinks = [
       </section>
 
       <section
-        class="space-y-4 print:order-3 print:break-inside-avoid print:space-y-2"
+        class="space-y-4 print:order-4 print:break-inside-avoid print:space-y-2"
       >
         <h2 class="text-3xl print:text-lg">
           {{ locale === "en" ? "Certifications" : "證照" }}

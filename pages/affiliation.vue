@@ -31,11 +31,6 @@ useHead({
           and packaging industries.
         </p>
         <div class="grid w-fit gap-4 sm:grid-cols-2">
-          <NuxtImg
-            src="/images/affiliation/pw512.png"
-            alt="Siam P&W Technic"
-            loading="lazy"
-          />
           <picture class="block aspect-[4/3] h-auto w-full max-w-md border">
             <source
               srcset="@/assets/images/affiliation/pw512.avif"
