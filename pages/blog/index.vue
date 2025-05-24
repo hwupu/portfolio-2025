@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n({ useScope: "local" });
+const { t, locale } = useI18n({ useScope: "local" });
 useHead({
   title: t("title"),
 });
@@ -16,6 +16,7 @@ const { data: articles } = await useAsyncData(route.path, () => {
       "language",
       "categories",
       "published_date",
+      "og_image",
     )
     .limit(3)
     .all();
@@ -34,20 +35,45 @@ const { data: articles } = await useAsyncData(route.path, () => {
     <h1 id="blog" class="scroll-mt-[var(--ui-header-height)] text-3xl">
       {{ t("title") }}
     </h1>
-    <div class="grid gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <article
         v-for="post in articles"
         :key="post.path"
-        class="relative isolate space-y-2 p-4"
+        class="group relative isolate space-y-2"
       >
-        <div class="aspect-video rounded-lg bg-gray-200"></div>
-        <h2 class="line-clamp-1">{{ post.title }}</h2>
-        <p class="line-clamp-2">{{ post.description }}</p>
-        <NuxtLink
+        <PublicPicture
+          class="aspect-video rounded-lg bg-gray-200 object-cover"
+          :src="post.og_image"
+          alt=""
+        />
+        <h2 class="line-clamp-1 flex-auto">{{ post.title }}</h2>
+        <p class="line-clamp-2 text-base">{{ post.description }}</p>
+        <ul
+          :aria-label="t('attr')"
+          class="absolute top-2 right-2 flex gap-2 text-xs"
+        >
+          <li>
+            <span class="sr-only">{{ t("category") }}</span>
+            <ul class="flex gap-2">
+              <li v-for="cat in post.categories" :key="cat">
+                <span class="bg-background rounded px-1 py-0.5">{{
+                  t(cat)
+                }}</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="sr-only">{{ t("lang") }}</span>
+            <span class="bg-background rounded px-1 py-0.5">{{
+              t(post.language)
+            }}</span>
+          </li>
+        </ul>
+        <NuxtLinkLocale
           :to="post.path"
           class="absolute inset-0"
           :aria-label="`${t('readMore')} ${post.title}`"
-        ></NuxtLink>
+        ></NuxtLinkLocale>
       </article>
     </div>
   </BaseContainer>
@@ -57,11 +83,25 @@ const { data: articles } = await useAsyncData(route.path, () => {
 {
   "en": {
     "title": "Blog",
-    "readMore": "Read on blog post:"
+    "readMore": "Read on blog post:",
+    "attr": "blog post details",
+    "lang": "blog post language",
+    "en": "ENG",
+    "zh": "CHT",
+    "category": "blog post category",
+    "emt": "EMT",
+    "web": "WEB"
   },
   "zh": {
     "title": "部落格",
-    "readMore": "閱讀更多"
+    "readMore": "閱讀文章：",
+    "attr": "文章屬性",
+    "lang": "文章語言",
+    "en": "英文",
+    "zh": "中文",
+    "category": "文章類別",
+    "emt": "EMT",
+    "web": "WEB"
   }
 }
 </i18n>

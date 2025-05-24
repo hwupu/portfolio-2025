@@ -36,11 +36,6 @@ export default defineNuxtConfig({
         },
       ],
     },
-    rootAttrs: {
-      // @ts-expect-error https://www.shadcn-vue.com/docs/components/drawer.html#scale-background
-      "vaul-drawer-wrapper": "",
-      class: "bg-[var(--background)]",
-    },
   },
   icon: {
     mode: "css",

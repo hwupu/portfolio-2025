@@ -11,7 +11,7 @@ const props = defineProps<{
 <template>
   <picture :class="cn('block flex-none', props.pictureClass)">
     <source
-      :srcset="`${props.src.replace('.webp', '.avif')}`"
+      :srcset="`${props.src?.replace('.webp', '.avif')}??''`"
       type="image/avif"
     />
     <source :srcset="props.src" type="image/webp" />

@@ -25,14 +25,14 @@ const switchLocalePath = useSwitchLocalePath();
         <Icon name="fa-solid:bars" class="size-6" />
       </button>
     </DrawerTrigger>
-    <DrawerContent class="px-4">
+    <DrawerContent>
       <DrawerTitle class="sr-only"></DrawerTitle>
       <DrawerDescription class="sr-only"></DrawerDescription>
-      <ul class="grid w-full gap-4" @click.capture="isActive = false">
+      <ul class="grid w-full" @click.capture="isActive = false">
         <li v-for="item in primary[locale as Locales]" :key="item.href">
           <NuxtLinkLocale
             :to="item.href"
-            class="text-base opacity-50 hover:opacity-100 focus-visible:opacity-100 motion-safe:transition-opacity"
+            class="block px-4 py-2 text-base opacity-50 hover:opacity-100 focus-visible:opacity-100 motion-safe:transition-opacity"
             active-class="opacity-100"
             >{{ item.title }}</NuxtLinkLocale
           >
@@ -40,7 +40,7 @@ const switchLocalePath = useSwitchLocalePath();
         <li v-for="item in secondary[locale as Locales]" :key="item.href">
           <NuxtLinkLocale
             :to="item.href"
-            class="text-base opacity-50 hover:opacity-100 focus-visible:opacity-100 motion-safe:transition-opacity"
+            class="block px-4 py-2 text-base opacity-50 hover:opacity-100 focus-visible:opacity-100 motion-safe:transition-opacity"
             active-class="opacity-100"
             >{{ item.title }}</NuxtLinkLocale
           >
@@ -48,7 +48,7 @@ const switchLocalePath = useSwitchLocalePath();
         <li>
           <NuxtLink
             :to="switchLocalePath(locale === 'en' ? 'zh' : 'en')"
-            class="text-base opacity-50 hover:opacity-100 focus-visible:opacity-100 motion-safe:transition-opacity"
+            class="block px-4 py-2 text-base opacity-50 hover:opacity-100 focus-visible:opacity-100 motion-safe:transition-opacity"
             >{{ t("lang") }}</NuxtLink
           >
         </li>

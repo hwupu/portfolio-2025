@@ -12,7 +12,7 @@ useHead({
 <template>
   <BaseHeaderShade />
   <LandingCoverSection />
-  <div class="bg-[#677F88] font-mono">
+  <div class="bg-[#677F88] font-mono text-white">
     <BaseHeaderShade class="bg-blue-950/50 text-white shadow-blue-700/10" />
     <div
       class="mt-[var(--ui-header-height)] grid min-h-screen place-items-center"
@@ -67,19 +67,19 @@ useHead({
       </BaseContainer>
     </div>
   </div>
-  <div class="bg-[#B4A79A]">
+  <div class="bg-[#B4A79A] text-white">
     <BaseHeaderShade class="bg-amber-950/50 text-white shadow-amber-700/10">
       <a id="experience" href="#experience">{{
         locale === "zh" ? "我的經歷" : "My Experience"
       }}</a>
     </BaseHeaderShade>
-    <div class="mt-[var(--ui-header-height)] min-h-screen">
-      <BaseContainer padding-y="default" class="flex flex-col gap-y-8 py-20">
+    <div class="mt-[var(--ui-header-height)] min-h-screen pb-20">
+      <BaseContainer class="flex flex-col gap-y-8 py-4 sm:py-8">
         <h2 class="text-center text-4xl font-bold">
           {{ locale === "zh" ? "我的經歷" : "My Experience" }}
         </h2>
-        <LandingExperienceSwiper class="w-full flex-none" />
       </BaseContainer>
+      <LandingExperienceSwiper />
     </div>
   </div>
   <div class="bg-orange-200 text-black">
